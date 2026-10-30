@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#112240"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2c6"/>
+      <stop offset="100%" stop-color="#64ffda"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="40" fill="url(#bgGrad)"/>
+  <circle cx="200" cy="150" r="65" fill="#233554" stroke="url(#accentGrad)" stroke-width="4"/>
+  <path d="M 110 320 C 110 240, 290 240, 290 320 Z" fill="#233554" stroke="url(#accentGrad)" stroke-width="4"/>
+  <text x="200" y="370" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#64ffda" text-anchor="middle">Arthur Bergmann</text>
+</svg>
