@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur Bergmann | Portfólio Profissional</title>
+  <meta name="description" content="Portfólio de Arthur Bergmann de Oliveira - Ciências Contábeis, Soluções Contábeis/Fiscais, Power BI, Qlik Cloud e Automações em VBA.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Fontes Google (Inter & Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brandNavyDark: '#07101e',
+            brandNavy: '#0a192f',
+            brandNavyCard: '#112240',
+            brandNavyBorder: '#233554',
+            brandTurquoise: '#00d2c6',
+            brandTurquoiseLight: '#64ffda',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brandNavyDark text-slate-300 font-sans antialiased selection:bg-brandTurquoise selection:text-brandNavyDark">
+
+  <!-- ==============================================================
+       1. BARRA DE NAVEGAÇÃO (NAVBAR FIXA)
+       ============================================================== -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brandNavy/90 backdrop-blur-md border-b border-brandNavyBorder/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Nome -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <span class="text-xl sm:text-2xl font-heading font-extrabold text-white tracking-tight">
+          Arthur <span class="text-brandTurquoise group-hover:text-brandTurquoiseLight transition-colors">Bergmann</span>
+        </span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#hero" class="nav-link text-slate-300 hover:text-brandTurquoise transition-colors">Início</a>
+        <a href="#sobre" class="nav-link text-slate-300 hover:text-brandTurquoise transition-colors">Sobre</a>
+        <a href="#competencias" class="nav-link text-slate-300 hover:text-brandTurquoise transition-colors">Competências</a>
+        <a href="#projetos" class="nav-link text-slate-300 hover:text-brandTurquoise transition-colors">Projetos</a>
+        <a href="#curriculo" class="nav-link text-slate-300 hover:text-brandTurquoise transition-colors">Currículo</a>
+        <a href="#contato" class="nav-link text-slate-300 hover:text-brandTurquoise transition-colors">Contato</a>
+      </nav>
+
+      <!-- Botão CTA Navbar -->
+      <div class="hidden md:block">
+        <a href="#contato" class="btn-glow inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-brandTurquoise text-brandTurquoise hover:bg-brandTurquoise hover:text-brandNavyDark font-semibold text-sm transition-all duration-300">
+          <i class="fa-regular fa-comment-dots"></i> Conectar
+        </a>
+      </div>
+
+      <!-- Botão Hambúrguer Mobile -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" type="button" aria-label="Abrir menu" class="text-slate-300 hover:text-brandTurquoise focus:outline-none p-2 text-xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Dropdown Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brandNavy border-b border-brandNavyBorder px-4 pt-2 pb-6 space-y-3">
+      <a href="#hero" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brandTurquoise hover:bg-brandNavyCard">Início</a>
+      <a href="#sobre" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brandTurquoise hover:bg-brandNavyCard">Sobre</a>
+      <a href="#competencias" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brandTurquoise hover:bg-brandNavyCard">Competências</a>
+      <a href="#projetos" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brandTurquoise hover:bg-brandNavyCard">Projetos</a>
+      <a href="#curriculo" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brandTurquoise hover:bg-brandNavyCard">Currículo</a>
+      <a href="#contato" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brandTurquoise hover:bg-brandNavyCard">Contato</a>
+    </div>
+  </header>
+
+
+  <main class="pt-20">
+
+    <!-- ==============================================================
+         2. HERO SECTION (APRESENTAÇÃO PRINCIPAL)
+         ============================================================== -->
+    <section id="hero" class="min-h-[calc(100vh-5rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+      
+      <!-- Detalhes de luz de fundo -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brandTurquoise/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
+        
+        <!-- Textos e Apresentação -->
+        <div class="flex-1 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandNavyCard border border-brandNavyBorder text-brandTurquoise text-xs sm:text-sm font-medium">
+            <span class="w-2 h-2 rounded-full bg-brandTurquoise animate-ping"></span>
+            Universidade Atitus • Ciências Contábeis 2026/1
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight leading-tight">
+            Arthur Bergmann <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandTurquoise to-brandTurquoiseLight">
+              de Oliveira
+            </span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-400 font-normal max-w-2xl leading-relaxed">
+            Unindo o rigor das áreas <strong class="text-white">Contábil e Fiscal</strong> à tecnologia: foco em <strong class="text-brandTurquoise">desenvolvimento analítico</strong>, Business Intelligence e automação de processos.
+          </p>
+
+          <!-- Ações Principais -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#projetos" class="btn-glow px-6 py-3.5 rounded-lg bg-brandTurquoise text-brandNavyDark font-bold text-sm tracking-wide shadow-lg hover:bg-brandTurquoiseLight transition-all">
+              <i class="fa-solid fa-layer-group mr-2"></i> Ver Projetos
+            </a>
+            <a href="./assets/docs/curriculo-arthur-bergmann.pdf" download="Curriculo_Arthur_Bergmann.pdf" class="px-6 py-3.5 rounded-lg bg-brandNavyCard border border-brandNavyBorder text-white hover:border-brandTurquoise hover:text-brandTurquoise font-medium text-sm transition-all">
+              <i class="fa-solid fa-file-arrow-down mr-2 text-brandTurquoise"></i> Baixar Currículo
+            </a>
+          </div>
+
+          <!-- Mini Badges de Tecnologias -->
+          <div class="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-slate-400">
+            <span class="flex items-center gap-1.5 px-3 py-1 rounded bg-brandNavyCard border border-brandNavyBorder"><i class="fa-solid fa-chart-column text-brandTurquoise"></i> Power BI</span>
+            <span class="flex items-center gap-1.5 px-3 py-1 rounded bg-brandNavyCard border border-brandNavyBorder"><i class="fa-solid fa-cloud text-brandTurquoise"></i> Qlik Cloud</span>
+            <span class="flex items-center gap-1.5 px-3 py-1 rounded bg-brandNavyCard border border-brandNavyBorder"><i class="fa-solid fa-file-excel text-brandTurquoise"></i> VBA / Excel</span>
+            <span class="flex items-center gap-1.5 px-3 py-1 rounded bg-brandNavyCard border border-brandNavyBorder"><i class="fa-solid fa-scale-balanced text-brandTurquoise"></i> Contábil & Fiscal</span>
+          </div>
+        </div>
+
+        <!-- Foto de Perfil Profissional -->
+        <div class="flex-shrink-0 relative group">
+          <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl p-1.5 bg-gradient-to-tr from-brandTurquoise to-brandNavyBorder shadow-2xl relative">
+            <div class="w-full h-full rounded-2xl overflow-hidden bg-brandNavyCard flex items-center justify-center">
+              <!-- NOTA: Substitua por sua foto real em assets/images/foto-perfil.jpg quando desejar -->
+              <img src="./assets/images/foto-perfil.svg" alt="Arthur Bergmann de Oliveira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==============================================================
+         3. SEÇÃO SOBRE MIM
+         ============================================================== -->
+    <section id="sobre" class="py-24 bg-brandNavy/50 border-t border-brandNavyBorder/50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-brandTurquoise font-semibold text-sm uppercase tracking-wider mb-2">Trajetória e Visão</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white">Sobre Mim</h2>
+          <div class="w-16 h-1 bg-brandTurquoise rounded-full mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 space-y-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+            <p>
+              Olá! Sou o <strong class="text-white">Arthur Bergmann de Oliveira</strong>, acadêmico de Ciências Contábeis na <strong class="text-white">Universidade Atitus</strong> (segundo semestre, Turma 2026/1).
+            </p>
+            <p>
+              Minha trajetória é movida pela convergência entre a <strong class="text-brandTurquoise">precisão analítica das rotinas contábeis e fiscais</strong> e a agilidade da tecnologia moderna. Acredito que a contabilidade contemporânea não se limita a registrar o passado, mas projeta o futuro das organizações através da inteligência de dados.
+            </p>
+            <p>
+              Dedico-me ao desenvolvimento de soluções que transformam dados complexos em dashboards executivos no <strong class="text-white">Power BI</strong>, customização de extensões na plataforma <strong class="text-white">Qlik Cloud</strong> e desenvolvimento de rotinas automatizadas com <strong class="text-white">Macros/VBA</strong> para eliminação de retrabalho operacional.
+            </p>
+          </div>
+
+          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            
+            <div class="p-6 rounded-xl bg-brandNavyCard border border-brandNavyBorder">
+              <div class="text-brandTurquoise text-2xl mb-2"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3 class="text-white font-heading font-semibold text-base mb-1">Formação Acadêmica</h3>
+              <p class="text-slate-400 text-sm">Ciências Contábeis na Universidade Atitus (Previsão: 2026/1).</p>
+            </div>
+
+            <div class="p-6 rounded-xl bg-brandNavyCard border border-brandNavyBorder">
+              <div class="text-brandTurquoise text-2xl mb-2"><i class="fa-solid fa-bullseye"></i></div>
+              <h3 class="text-white font-heading font-semibold text-base mb-1">Foco de Atuação</h3>
+              <p class="text-slate-400 text-sm">Áreas Contábil, Tributária/Fiscal, Business Intelligence e Automação de Processos.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==============================================================
+         4. SEÇÃO DE COMPETÊNCIAS & FERRAMENTAS
+         ============================================================== -->
+    <section id="competencias" class="py-24 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-brandTurquoise font-semibold text-sm uppercase tracking-wider mb-2">Expertise Técnica</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white">Competências e Ferramentas</h2>
+          <div class="w-16 h-1 bg-brandTurquoise rounded-full mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Card 1: Contábil & Fiscal -->
+          <div class="p-8 rounded-2xl bg-brandNavyCard border border-brandNavyBorder card-hover-effect flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-brandNavyDark flex items-center justify-center text-brandTurquoise text-2xl mb-6 border border-brandNavyBorder">
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-white mb-3">Contábil & Fiscal</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Fundamentos de análise de demonstrativos (DRE, Balanço Patrimonial, Fluxo de Caixa), conciliações e rotinas fiscais com visão estratégica para tomada de decisão.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-brandNavyBorder/60">
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-slate-300">Demonstrativos</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-slate-300">Conciliação</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-slate-300">Rotinas Tributárias</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Business Intelligence (Power BI & Qlik) -->
+          <div class="p-8 rounded-2xl bg-brandNavyCard border border-brandNavyBorder card-hover-effect flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-brandNavyDark flex items-center justify-center text-brandTurquoise text-2xl mb-6 border border-brandNavyBorder">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-white mb-3">Business Intelligence</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Criação de relatórios analíticos, modelagem de dados, fórmulas DAX no Power BI e desenvolvimento de extensões customizadas no ecossistema Qlik Cloud.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-brandNavyBorder/60">
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-brandTurquoise">Power BI</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-brandTurquoise">Qlik Cloud</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-brandTurquoise">DAX</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Automação & Excel Avançado -->
+          <div class="p-8 rounded-2xl bg-brandNavyCard border border-brandNavyBorder card-hover-effect flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-brandNavyDark flex items-center justify-center text-brandTurquoise text-2xl mb-6 border border-brandNavyBorder">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-white mb-3">Automação & VBA</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Desenvolvimento de rotinas em VBA para automatizar processos repetitivos em planilhas, higienização e tratamento de bases de dados com alta eficiência.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-brandNavyBorder/60">
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-slate-300">Macros VBA</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-slate-300">Excel Avançado</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-brandNavyDark text-slate-300">ETL Operacional</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==============================================================
+         5. SEÇÃO DE PROJETOS EM DESTAQUE
+         ============================================================== -->
+    <section id="projetos" class="py-24 bg-brandNavy/50 border-t border-brandNavyBorder/50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-brandTurquoise font-semibold text-sm uppercase tracking-wider mb-2">Portfólio Prático</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white">Projetos em Destaque</h2>
+          <div class="w-16 h-1 bg-brandTurquoise rounded-full mt-3"></div>
+          <p class="text-slate-400 max-w-xl text-center text-sm sm:text-base mt-4">
+            Aplicações práticas desenvolvidas unindo a lógica de negócio contábil à engenharia analítica.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Projeto 1: Dashboard Financeiro Power BI -->
+          <article class="rounded-2xl bg-brandNavyCard border border-brandNavyBorder overflow-hidden card-hover-effect flex flex-col justify-between">
+            <div class="p-6 sm:p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brandTurquoise/10 text-brandTurquoise border border-brandTurquoise/30">
+                  Business Intelligence
+                </span>
+                <i class="fa-solid fa-chart-line text-brandTurquoise text-xl"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-white mb-3">
+                Dashboard Financeiro em Power BI
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Painel analítico para acompanhamento de resultados financeiros, estrutura de DRE gerencial, margens de rentabilidade e fluxo de caixa com filtros dinâmicos.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">Power BI</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">DAX</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">DRE</span>
+              </div>
+            </div>
+            <div class="px-6 sm:px-8 pb-6 pt-0 border-t border-brandNavyBorder/40">
+              <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brandTurquoise"></i> Estruturado</span>
+                <span class="text-brandTurquoise font-medium cursor-pointer hover:underline" title="Os materiais deste projeto poderão ser acessados aqui em breve">
+                  Materiais em breve <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2: Extensões Qlik Cloud -->
+          <article class="rounded-2xl bg-brandNavyCard border border-brandNavyBorder overflow-hidden card-hover-effect flex flex-col justify-between">
+            <div class="p-6 sm:p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brandTurquoise/10 text-brandTurquoise border border-brandTurquoise/30">
+                  Desenvolvimento / Cloud
+                </span>
+                <i class="fa-solid fa-cubes text-brandTurquoise text-xl"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-white mb-3">
+                Desenvolvimento de Extensões no Qlik Cloud
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Construção e customização de extensões para aprimorar as capacidades visuais e analíticas do Qlik Cloud, adaptando soluções para demandas corporativas específicas.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">Qlik Cloud</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">APIs</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">Customização</span>
+              </div>
+            </div>
+            <div class="px-6 sm:px-8 pb-6 pt-0 border-t border-brandNavyBorder/40">
+              <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brandTurquoise"></i> Em desenvolvimento</span>
+                <span class="text-brandTurquoise font-medium cursor-pointer hover:underline" title="Os materiais deste projeto poderão ser acessados aqui em breve">
+                  Materiais em breve <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3: Macro / VBA Excel -->
+          <article class="rounded-2xl bg-brandNavyCard border border-brandNavyBorder overflow-hidden card-hover-effect flex flex-col justify-between">
+            <div class="p-6 sm:p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brandTurquoise/10 text-brandTurquoise border border-brandTurquoise/30">
+                  Automação Operacional
+                </span>
+                <i class="fa-solid fa-gears text-brandTurquoise text-xl"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-white mb-3">
+                Desenvolvimento Macro/VBA em Excel
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Scripts em VBA para automação de rotinas contábeis, conciliação automática de extratos e relatórios fiscais, reduzindo tempos de processamento e riscos de erro manual.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">Excel</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">VBA</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-brandNavyDark text-slate-300">Produtividade</span>
+              </div>
+            </div>
+            <div class="px-6 sm:px-8 pb-6 pt-0 border-t border-brandNavyBorder/40">
+              <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brandTurquoise"></i> Operacional</span>
+                <span class="text-brandTurquoise font-medium cursor-pointer hover:underline" title="Os materiais deste projeto poderão ser acessados aqui em breve">
+                  Materiais em breve <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==============================================================
+         6. SEÇÃO DE DOWNLOAD DO CURRÍCULO
+         ============================================================== -->
+    <section id="curriculo" class="py-20 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl p-8 sm:p-12 bg-gradient-to-r from-brandNavyCard to-brandNavy border border-brandNavyBorder shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+          
+          <div class="space-y-3">
+            <span class="text-xs uppercase tracking-wider text-brandTurquoise font-bold">Documento Profissional</span>
+            <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white">Currículo Completo Atualizado</h2>
+            <p class="text-slate-400 text-sm sm:text-base max-w-md">
+              Acesse o histórico acadêmico na Universidade Atitus, certificações e portfólio detalhado em formato PDF.
+            </p>
+          </div>
+
+          <div class="flex-shrink-0">
+            <a href="./assets/docs/curriculo-arthur-bergmann.pdf" download="Curriculo_Arthur_Bergmann.pdf" class="btn-glow inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-brandTurquoise text-brandNavyDark font-bold text-sm hover:bg-brandTurquoiseLight transition-all duration-300">
+              <i class="fa-solid fa-file-pdf text-lg"></i>
+              <span>Baixar Currículo (PDF)</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==============================================================
+         7. SEÇÃO DE CONTATO E CONEXÕES
+         ============================================================== -->
+    <section id="contato" class="py-24 bg-brandNavy/60 border-t border-brandNavyBorder/60">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-brandTurquoise font-semibold text-sm uppercase tracking-wider mb-2">Vamos conversar</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white">Canais de Contato</h2>
+          <div class="w-16 h-1 bg-brandTurquoise rounded-full mt-3"></div>
+          <p class="text-slate-400 max-w-lg text-sm sm:text-base mt-4">
+            Estou à disposição para oportunidades de estágio, projetos de desenvolvimento e networking profissional.
+          </p>
+        </div>
+
+        <!-- Cards de Redes Sociais -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-brandNavyCard border border-brandNavyBorder card-hover-effect flex flex-col items-center text-center group">
+            <div class="w-14 h-14 rounded-full bg-brandNavyDark flex items-center justify-center text-brandTurquoise text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <h3 class="text-white font-heading font-semibold text-base mb-1">LinkedIn</h3>
+            <span class="text-slate-400 text-xs">Conectar na rede</span>
+          </a>
+
+          <!-- E-mail -->
+          <a href="mailto:contato@arthurbergmann.com" class="p-6 rounded-2xl bg-brandNavyCard border border-brandNavyBorder card-hover-effect flex flex-col items-center text-center group">
+            <div class="w-14 h-14 rounded-full bg-brandNavyDark flex items-center justify-center text-brandTurquoise text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <h3 class="text-white font-heading font-semibold text-base mb-1">E-mail</h3>
+            <span class="text-slate-400 text-xs">Enviar mensagem</span>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/?text=Olá%20Arthur,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-brandNavyCard border border-brandNavyBorder card-hover-effect flex flex-col items-center text-center group">
+            <div class="w-14 h-14 rounded-full bg-brandNavyDark flex items-center justify-center text-brandTurquoise text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3 class="text-white font-heading font-semibold text-base mb-1">WhatsApp</h3>
+            <span class="text-slate-400 text-xs">Iniciar conversa direta</span>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-brandNavyCard border border-brandNavyBorder card-hover-effect flex flex-col items-center text-center group">
+            <div class="w-14 h-14 rounded-full bg-brandNavyDark flex items-center justify-center text-brandTurquoise text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h3 class="text-white font-heading font-semibold text-base mb-1">Instagram</h3>
+            <span class="text-slate-400 text-xs">Acompanhar perfil</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==============================================================
+       8. RODAPÉ (FOOTER)
+       ============================================================== -->
+  <footer class="py-10 bg-brandNavyDark border-t border-brandNavyBorder text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p class="text-slate-400">
+        &copy; 2026 Arthur Bergmann de Oliveira • Todos os direitos reservados.
+      </p>
+      <p>
+        Ciências Contábeis — Universidade Atitus (Turma 2026/1) • Hospedado com <i class="fa-regular fa-heart text-brandTurquoise"></i> via <strong class="text-slate-400">GitHub Pages</strong>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
