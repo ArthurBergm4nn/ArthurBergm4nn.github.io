@@ -1,0 +1,64 @@
+/* ==========================================================================
+   PORTFÓLIO PROFISSIONAL - ARTHUR BERGMANN DE OLIVEIRA
+   Estilização Customizada e Suave
+   Paleta: Azul Marinho (#0a192f, #112240), Turquesa (#00d2c6, #64ffda), Neutros
+   ========================================================================== */
+
+/* Rolagem suave */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+::-webkit-scrollbar-thumb {
+  background: #233554;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00d2c6;
+}
+
+/* Utilitários de Gradientes e Efeitos */
+.bg-navy-dark {
+  background-color: #07101e;
+}
+.bg-navy-card {
+  background-color: #112240;
+}
+.bg-navy-light {
+  background-color: #1d3557;
+}
+.text-turquoise {
+  color: #00d2c6;
+}
+.border-turquoise {
+  border-color: #00d2c6;
+}
+.hover-turquoise:hover {
+  color: #64ffda;
+}
+
+/* Transições suaves */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover-effect:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px -10px rgba(0, 210, 198, 0.25);
+  border-color: #00d2c6;
+}
+
+/* Animação suave para botões */
+.btn-glow {
+  transition: all 0.3s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 210, 198, 0.4);
+}
